@@ -3,18 +3,27 @@
 
   <section>
     <% if !@guess %>
-  <p><%=@card.question%></p>
-  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@card.id%>' method= "POST">
+  <p><%=@picked_card.question%></p>
+  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
     <input type="text" name="guess" placeholder="Your answer">
     <input type= "submit" value= "Submit">
   </form>
   </section>
 
-  <% elsif @guess.correct %>
-  <p>Correct!</p>
   <% else %>
-  <p>Incorrect. <%= @card.answer %> is the correct answer.</p>
+
+    <% if @guess.correct %>
+    <p>Correct!</p>
+    <% else %>
+    <p>Incorrect. <%= @picked_card.answer %> is the correct answer.</p>
+    <% end %>
+  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
+  <input type= "submit" value= "Next">
+  </form>
+
   <% end %>
+  </section>
+
 
   <form
 

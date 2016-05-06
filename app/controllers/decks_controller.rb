@@ -11,13 +11,14 @@ end
 get '/decks/:id' do
   @deck = Deck.find_by(id: params[:id])
   @shuffled_deck = @deck.cards.shuffle
-  @card = @shuffled_deck.pop
+  @picked_card = @shuffled_deck.pop
+  # session[:shuffled_deck] = [@shuffled_deck]
   erb :'/decks/show'
 end
 
 post '/decks/:deck_id/cards/:id' do
   @deck = Deck.find(params[:deck_id])
-  @card = @deck.cards.find(params[:id])
+  @picked_card = @deck.cards.find_by(id: params[:id])
   @game = Game.create(deck_id: @deck.id, user_id: current_user.id)
-  redirect "/games/#{@game.id}/decks/#{@deck.id}/cards/#{@card.id}"
+  redirect "/games/#{@game.id}/decks/#{@deck.id}/cards/#{@picked_card.id}"
 end
