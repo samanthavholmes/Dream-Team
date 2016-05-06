@@ -1,0 +1,26 @@
+.body {
+  background-color: #EEEEEE;
+}
+.header {
+  background-color: #2D9FC4;
+  height: 10em;
+  width: 100%;
+  position: fixed;
+}
+
+/* For the Logo/Home button */
+.logo {
+  color: white;
+  float: left;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+/* For the Login/Logout Link */
+.login {
+  color: white;
+  float: right;
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
