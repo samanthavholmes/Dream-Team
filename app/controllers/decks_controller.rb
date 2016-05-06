@@ -6,5 +6,3 @@ get '/decks' do
   else
     redirect '/login'
 end
-
-
