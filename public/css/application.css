@@ -1,15 +1,32 @@
-.body {
+body {
   background-color: #EEEEEE;
 }
+
 .header {
   background-color: #2D9FC4;
   height: 10em;
   width: 100%;
   position: fixed;
+  top: 0px;
 }
+
+.rounded-gray {
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  color: #333333;
+}
+
+.container {
+  background-color: #EEEEEE;
+  margin-top:15em;
+  margin-left: 25%;
+  width: 600px;
+  text-align: center;
+}
+
 
 /* For the Logo/Home button */
 .logo {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
   color: white;
   float: left;
   margin-top: 2em;
@@ -18,9 +35,35 @@
 
 /* For the Login/Logout Link */
 .login {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
   color: white;
   float: right;
-  margin-top: 2em;
+  margin-top: 2.5em;
   margin-right: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+a:active {
+    text-decoration: underline;
+    color: white;
 }
 
