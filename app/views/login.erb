@@ -1,0 +1,24 @@
+<div class = "container">
+
+  <h1> Welcome to FlashCards </h1>
+  <h2> Please Login </h2>
+
+
+  <% if @errors %>
+  <ul>
+    <% @errors.each do |message| %>
+    <li> <%= message %> </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <form action = '/login' method= "POST">
+    <input type= "text" name= "username" placeholder= "Username">
+    <input type= "password" name= "password" placeholder= "Password">
+    <input type= "submit" value= "Login">
+  </form>
+</div>
+
+  <p>New user? <a href= "/users/new">Sign up!</a></p>
+
+
