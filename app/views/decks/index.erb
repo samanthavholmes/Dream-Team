@@ -1,0 +1,11 @@
+<div class= 'container'>
+  <h1>Playable Decks</h1>
+  <ul>
+    <% @decks.each do |deck| %>
+      <li>
+        <a href="/decks/<%= deck.id %>"><%= deck.deck_name %></a>
+      </li>
+    <% end %>
+  </ul>
+
+</div>

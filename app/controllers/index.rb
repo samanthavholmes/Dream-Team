@@ -1,3 +1,3 @@
 get '/' do
-  erb :'/login'
+  redirect '/login'
 end
