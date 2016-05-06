@@ -1,3 +1,3 @@
 get '/' do
-  redirect '/login'
+    redirect '/login'
 end

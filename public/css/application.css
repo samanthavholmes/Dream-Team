@@ -1,11 +1,12 @@
 .body {
   background-color: #EEEEEE;
 }
+
 .header {
   background-color: #2D9FC4;
   height: 10em;
   width: 100%;
-  position: fixed;
+  position: relative;
 }
 
 /* For the Logo/Home button */

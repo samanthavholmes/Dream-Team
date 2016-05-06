@@ -1,5 +1,9 @@
 get '/login' do
-  erb :'/login'
+  if !logged_in?
+    erb :'/login'
+  else
+    redirect '/decks'
+  end
 end
 
 post '/login' do

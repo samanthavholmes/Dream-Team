@@ -1,0 +1,23 @@
+<div>
+  <h1><%= @deck.deck_name %> Deck</h1>
+
+  <section>
+    <% if !@guess %>
+  <p><%=@card.question%></p>
+  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@card.id%>' method= "POST">
+    <input type="text" name="guess" placeholder="Your answer">
+    <input type= "submit" value= "Submit">
+  </form>
+  </section>
+
+  <% elsif @guess.correct %>
+  <p>Correct!</p>
+  <% else %>
+  <p>Incorrect. <%= @card.answer %> is the correct answer.</p>
+  <% end %>
+
+  <form
+
+</div>
+
+
