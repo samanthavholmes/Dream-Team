@@ -1,24 +1,30 @@
 <div>
+  <div class = "container">
+    <h1 class="rounded-gray"> Welcome to Quizzy </h1>
+    <h2 class="rounded-gray"> Please Login </h2>
 
-  <h1>Please Login</h1>
+    <h1>Please Login</h1>
 
-  <% if @errors %>
-  <ul>
-    <% @errors.each do |message| %>
-    <li> <%= message %> </li>
+    <% if @errors %>
+    <ul>
+      <% @errors.each do |message| %>
+      <li> <%= message %> </li>
+      <% end %>
+    </ul>
     <% end %>
-  </ul>
-  <% end %>
 
+    <form action = '/login' method= "POST">
+      <input type= "text" name= "username" placeholder= "Username">
+      <input type= "password" name= "password" placeholder= "Password">
+      <input type= "submit" value= "Login">
+    </form>
+  </div>
 
-  <form action = '/login' method= "POST">
-    <input type= "text" name= "username" placeholder= "Username">
-    <input type= "password" name= "password" placeholder= "Password">
-    <input type= "submit" value= "Login">
-  </form>
+  <p>New user? <a href= "/users/new">Sign up!</a></p>
+  <p class="rounded-gray">New user? <a href= "/users/new">Sign up!</a></p>
+  <p class="rounded-gray"><a href= "/logout">Logout</a></p>
 
 </div>
 
-  <p>New user? <a href= "/users/new">Sign up!</a></p>
 
 
