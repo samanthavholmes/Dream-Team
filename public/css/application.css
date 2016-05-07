@@ -107,28 +107,37 @@ body {
 
 .login a:hover {
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
-  color: #333333;
+  color: #377491;
   float: right;
   margin-top: 2em;
   margin-right: 2em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .profile a:hover {
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
-  color: #333333;
+  color: #377491;
   float: right;
   margin-top: 2em;
   margin-right: 1em;
   padding-right: 1.25em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .decks a:hover {
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
-  color: #333333;
+  color: #377491;
   float: right;
   margin-top: 2em;
   margin-right: 1em;
   padding-right: 1.5em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 a {
