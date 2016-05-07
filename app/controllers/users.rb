@@ -12,3 +12,10 @@ post '/users' do
     erb :'/users/new'
   end
 end
+
+get '/users/:id' do
+  @played_decks = current_user.played_decks.group(:id)
+  @played_games = current_user.played_games
+  @game_correct_hash = current_user.guesses.where(correct:true).group(:game_id).count
+  erb :'/users/show'
+end

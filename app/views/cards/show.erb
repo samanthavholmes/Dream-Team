@@ -2,7 +2,6 @@
   <h1><%= @deck.deck_name %> Deck</h1>
 
   <section>
-    <% if !@guess %>
   <p><%=@picked_card.question%></p>
   <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
     <input type="text" name="guess" placeholder="Your answer">
@@ -10,16 +9,13 @@
   </form>
   </section>
 
-  <% else %>
-
+  <% if @guess %>
     <% if @guess.correct %>
     <p>Correct!</p>
     <% else %>
-    <p>Incorrect. <%= @picked_card.answer %> is the correct answer.</p>
+    <p>Incorrect. <%= @previous_card.answer %> is the correct answer.</p>
     <% end %>
-  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
-  <input type= "submit" value= "Next">
-  </form>
+
 
   <% end %>
   </section>

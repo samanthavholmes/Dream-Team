@@ -1,0 +1,21 @@
+<div>
+
+  <h1><%=current_user.username.capitalize%>'s Statistics</h1>
+
+  <ul>
+    <% @played_decks.each do |deck| %>
+    <li> <%= deck.deck_name %> :: Cards in Deck: <%= deck.cards.length%></li>
+      <% @played_games.each do |game| %>
+        <% if game.deck_id == deck.id %>
+          <p>Date: </p><%= game.created_at %>
+            <% @game_correct_hash.each do |game_id, num_correct| %>
+                <% if game_id == game.id %>
+              <p>Number Correct: </p> <%= num_correct %>
+            <% end %>
+             <% end %>
+          <% end %>
+      <% end %>
+    <% end %>
+  </ul>
+
+</div>
