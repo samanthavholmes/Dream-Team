@@ -2,7 +2,7 @@
 <h3>This is the <%= @deck.deck_name %> deck</h3>
 <p>Would you like to start a round?</p>
 <br>
-  <form action="/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>" method="post">
+  <form action="/decks/<%=@deck.id%>" method="post">
     <input type="hidden" name="deck_id" value="<%= @deck.id %>" >
     <input type="submit" value="Start Game">
   </form>

@@ -1,0 +1,16 @@
+<div>
+
+<% if @guess.correct%>
+    <p>Correct!</p>
+<% else %>
+  <p>Incorrect. <%= @previous_card.answer %> is the correct answer.</p>
+  <%end%>
+
+  <p>You got <%= @game.guesses.where(correct: true).length%> out of <%=@game.guesses.length%> correct.</p>
+
+  <a href= "/users/<%=current_user.id%>">View all your stats!</a>
+
+
+</div>
+
+

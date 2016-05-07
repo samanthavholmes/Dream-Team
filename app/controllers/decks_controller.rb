@@ -10,15 +10,12 @@ end
 
 get '/decks/:id' do
   @deck = Deck.find_by(id: params[:id])
-  @shuffled_deck = @deck.cards.shuffle
-  @picked_card = @shuffled_deck.pop
   erb :'/decks/show'
 end
 
-post '/decks/:deck_id/cards/:id' do
+post '/decks/:deck_id' do
   @deck = Deck.find(params[:deck_id])
   @game = Game.create(deck_id: @deck.id, user_id: current_user.id)
-  @game.cards << @deck.cards.shuffle
-  @picked_card = @deck.cards.find_by(id: params[:id])
-  redirect "/games/#{@game.id}/decks/#{@deck.id}/cards/#{@picked_card.id}"
+  @picked_card = @deck.cards.sample
+  erb :'/cards/show'
 end
