@@ -1,10 +1,10 @@
-<div>
+<div class="container">
 
-    <p><%= Guess.display_result(@previous_card, @guess) %></p>
+    <h2 class="rounded-gray"><%= Guess.display_result(@previous_card, @guess) %></h2>
 
-  <p>You got <%= @game.guesses.where(correct: true).length%> out of <%=@game.guesses.length%> correct.</p>
+  <h1 class="rounded-gray">You got <span class="blue"><%= @game.guesses.where(correct: true).length%></span> out of <span class="blue"><%=@game.guesses.length%></span> correct.</h1>
 
-  <a href= "/users/<%=current_user.id%>">View all your stats!</a>
+  <h2><a href= "/users/<%=current_user.id%>">View all your stats!</a></h2>
 
 </div>
 

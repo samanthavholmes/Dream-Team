@@ -1,31 +1,33 @@
-<div>
+<div class="container">
 
-  <h1><%=current_user.username.capitalize%>'s Statistics</h1>
+  <h1 class="rounded-gray"><%=current_user.username.capitalize%>'s Statistics</h1>
 
-  <ul>
-    <% @played_decks.each do |deck| %>
-    <li> <%= deck.deck_name %> :: Cards in Deck: <%= deck.cards.length%></li>
+<% @played_decks.each do |deck| %>
+<div class="stat-container">
+  <div class="stat-text">
+  <h2 class="blue">Deck: <%= deck.deck_name %></h2>
+  <h3 class="rounded-gray">Total Cards: <%= deck.cards.length%></h3>
+  <% @played_games.each do |game| %>
+    <% if game.guesses.length == deck.cards.length %>
+      <% if game.deck_id == deck.id %>
 
-      <% @played_games.each do |game| %>
-      <% if game.guesses.length == deck.cards.length %>
-        <% if game.deck_id == deck.id %>
-          <p>* Date: <%= game.created_at.strftime("%b %d, %Y") %></p>
-            <% @game_correct_hash.each do |game_id, num_correct| %>
-                <% if game_id == game.id %>
-              <p>Percentage Correct:  <%= (num_correct.to_f/deck.cards.length * 100).round %>%</p>
-             <% end %>
-             <% end %>
-             <% @game_incorrect_hash.each do |game_id, num_incorrect| %>
-                <% if game_id == game.id && !@game_correct_hash.has_key?(game.id)%>
-              <p>Percentage Correct:  0% </p>
-            <% end %>
-             <% end %>
-          <% end %>
-      <% end %>
-      <% end %>
+    <span class="rounded-gray"><span class="highlight-word">Date:</span> <%= game.created_at.strftime("%b %d, %Y") %></span>
+    <% @game_correct_hash.each do |game_id, num_correct| %>
+    <% if game_id == game.id %>
+    <span class="rounded-gray">&nbsp;&nbsp;&nbsp;<span class="highlight-word">Score:</span> <%= (num_correct.to_f/deck.cards.length * 100).round %>%</span><br><br>
     <% end %>
-  </ul>
+    <% end %>
+    <% @game_incorrect_hash.each do |game_id, num_incorrect| %>
+    <% if game_id == game.id && !@game_correct_hash.has_key?(game.id)%>
+    <span class="rounded-gray">&nbsp;&nbsp;&nbsp;<span class="highlight-word">Score:</span> 0%</span>
+    <% end %>
+    <% end %>
 
+  <% end %>
+      <% end %>
+      <% end %>
+</div></div>
+    <% end %>
 
 
 </div>

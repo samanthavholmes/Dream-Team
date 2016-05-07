@@ -1,14 +1,16 @@
-<div>
+<div class="container">
 
-  <h1> Please Sign Up </h1>
-
-
-  <%= erb :'/_errors', layout: false %>
+  <h1 class="rounded-gray"> Sign Up </h1>
 
 
-  <form action = '/users' method= "POST">
-    <input type= "text" name= "user[username]" placeholder= "Username">
-    <input type= "password" name= "user[password]" placeholder= "Password">
-    <input type= "submit" value= "Sign Up">
+
+  <h3 class="red"><%= erb :'/_errors', layout: false %></h3>
+
+
+  <form class="form" action = '/users' method= "POST">
+    <input type= "text" name= "user[username]" placeholder= "Username"><br><br>
+    <input type= "password" name= "user[password]" placeholder= "Password"><br><br>
+    <input class="button" type= "submit" value= "Sign Up">
   </form>
+  <h3 class="rounded-gray">Already Registered?<a href= "/users/new"> Login!</a></h3>
 </div>
