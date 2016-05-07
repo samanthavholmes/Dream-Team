@@ -1,21 +1,24 @@
-<div>
-  <h1><%= @deck.deck_name %> Deck</h1>
-
-  <section>
-  <p><%=@picked_card.question%></p>
-  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
-    <input type="text" name="guess" placeholder="Your answer">
-    <input type= "submit" value= "Submit">
-  </form>
-  </section>
-
-  <% if @guess %>
-    <p><%= Guess.display_result(@previous_card, @guess) %></p>
-  <% end %>
-  </section>
-
-  <form
-
+<div class="container">
+  <h1 class="rounded-gray"><%= @deck.deck_name.capitalize %> Deck</h1>
 </div>
+
+  <div class="flashcard">
+    <div class="flashcard-text"><p><%=@picked_card.question%></p>
+    </div>
+  </div>
+
+<section class="guess-container">
+  <form class="guess-form" action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
+    <input type="text" name="guess" placeholder="Type your answer here"><br><br>
+    <input class="button" type= "submit" value="Submit">
+  </form>
+</section>
+
+<section class="guess-container">
+  <% if @guess %>
+    <h2 class="rounded-gray"><%= Guess.display_result(@previous_card, @guess) %></h2>
+  <% end %>
+</section>
+
 
 
