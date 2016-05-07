@@ -1,6 +1,6 @@
-<div>
+<div class="container">
 
-  <h1> Please Sign Up </h1>
+  <h1 class="rounded-gray"> Sign Up </h1>
 
 
   <% if @errors %>
@@ -11,9 +11,10 @@
   </ul>
   <% end %>
 
-  <form action = '/users' method= "POST">
-    <input type= "text" name= "user[username]" placeholder= "Username">
-    <input type= "password" name= "user[password]" placeholder= "Password">
-    <input type= "submit" value= "Sign Up">
+  <form class="form" action = '/users' method= "POST">
+    <input type= "text" name= "user[username]" placeholder= "Username"><br><br>
+    <input type= "password" name= "user[password]" placeholder= "Password"><br><br>
+    <input class="button" type= "submit" value= "Sign Up">
   </form>
+  <h3 class="rounded-gray">Already Registered?<a href= "/users/new"> Login!</a></h3>
 </div>

@@ -1,28 +1,26 @@
-<div>
-  <h1><%= @deck.deck_name %> Deck</h1>
-
-  <section>
-  <p><%=@picked_card.question%></p>
-  <form action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
-    <input type="text" name="guess" placeholder="Your answer">
-    <input type= "submit" value= "Submit">
-  </form>
-  </section>
-
-  <% if @guess %>
-    <% if @guess.correct %>
-    <p>Correct!</p>
-    <% else %>
-    <p>Incorrect. <%= @previous_card.answer %> is the correct answer.</p>
-    <% end %>
-
-
-  <% end %>
-  </section>
-
-
-  <form
-
+<div class="container">
+  <h1 class="rounded-gray"><%= @deck.deck_name.capitalize %> Deck</h1>
 </div>
 
+<div class="flashcard">
+    <div class="flashcard-text"><p><%=@picked_card.question%></p>
+    </div>
+  </div>
+
+<section class="guess-container">
+  <form class="guess-form" action='/games/<%=@game.id%>/decks/<%=@deck.id%>/cards/<%=@picked_card.id%>' method= "POST">
+    <input type="text" name="guess" placeholder="Type your answer here"><br><br>
+    <input class="button" type= "submit" value="Submit">
+  </form>
+</section>
+
+<section class="guess-container">
+  <% if @guess %>
+    <% if @guess.correct %>
+    <h2 class="blue">Correct!</h2>
+    <% else %>
+    <h2 class="red">Incorrect.</h2><h2 class="rounded-gray"> <%= @previous_card.answer %> is the correct answer.</h2>
+    <% end %>
+  <% end %>
+</section>
 

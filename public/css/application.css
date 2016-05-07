@@ -1,12 +1,14 @@
 body {
   background-color: #EEEEEE;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  padding-bottom:2em;
 }
 
 .header {
   background-color: #2D9FC4;
   height: 10em;
   width: 100%;
-  position: relative;
+  position: absolute;
   top: 0px;
 }
 
@@ -19,52 +21,199 @@ body {
   background-color: #EEEEEE;
   margin-top:15em;
   margin-left: 25%;
-  width: 600px;
+  width: 50%;
   text-align: center;
-
 }
 
+.deck-card {
+  background-color: #2D9FC4;
+  background-size: 100%, 100%;
+  border-radius: 1em;
+  height: 6em;
+  width: 18em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.deck-card-text {
+  position: absolute;
+  display: table;
+  height: 6em;
+  width: 18em;
+}
+
+.deck-card-text a {
+  color: white;
+  word-wrap: break-word;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+.highlight-word {
+  color: #2D9FC4;
+  font-size: 1.25em;
+}
+
+.flashcard {
+  background-color: white;
+  background-image: url('../flashcard.png');
+  position: relative;
+  background-size: 100%, 100%;
+  border-radius: 1em;
+  height: 18em;
+  width: 30em;
+  margin: 0 auto;
+}
+
+.flashcard-text {
+  position: absolute;
+  top: 50%;
+  display: table;
+  width: 30em;
+  margin: 0 auto;
+}
+
+.flashcard-text p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  word-wrap: break-word;
+  position: relative;
+  top: -50%;
+  font-size: 2em;
+}
 
 /* For the Logo/Home button */
-.logo {
+.logo a {
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  font-size: 1.5em;
   color: white;
   float: left;
-  margin-top: 2em;
+  margin-top: .5em;
   margin-left: 1em;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.logo a:hover {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  font-size: 1.5em;
+  color: white;
+  float: left;
+  margin-top: .5em;
+  margin-left: 1em;
+  text-decoration: none;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* For the Login/Logout Link */
-.login {
+.login a {
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
   color: white;
   float: right;
-  margin-top: 2.5em;
+  margin-top: 2em;
+  margin-right: 2em;
+}
+
+.profile a {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: white;
+  float: right;
+  margin-top: 2em;
   margin-right: 1em;
+  padding-right: 1.25em;
+}
+
+.decks a {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: white;
+  float: right;
+  margin-top: 2em;
+  margin-right: 1em;
+  padding-right: 1.5em;
+}
+
+
+/*Hover links*/
+
+.login a:hover {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: #377491;
+  float: right;
+  margin-top: 2em;
+  margin-right: 2em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.profile a:hover {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: #377491;
+  float: right;
+  margin-top: 2em;
+  margin-right: 1em;
+  padding-right: 1.25em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.decks a:hover {
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: #377491;
+  float: right;
+  margin-top: 2em;
+  margin-right: 1em;
+  padding-right: 1.5em;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 a {
-  text-decoration: none;
+  color: #2D9FC4;
+}
+
+.form input {
+  font-size: 1.5em;
+}
+
+.guess-container {
+  margin-top: 2em;
+  background-color: #EEEEEE;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+}
+
+.blue {
+  color: #2D9FC4;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.red {
+  color: #cc0000;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+
+.guess-form input {
+  font-size: 1.5em;
+  color: black;
+  border: none;
+  width: 16em;
+  text-align: center;
+}
+
+.button {
+  border: none;
   color: white;
+  border-radius:1.75em;
+  background-color: #2D9FC4;
+  padding: .5em .5em .5em .5em;
 }
-
-a:link {
-    text-decoration: none;
-    color: white;
-}
-
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: white;
-}
-
-a:active {
-    text-decoration: underline;
-    color: white;
-}
-

@@ -1,14 +1,15 @@
-<div>
+<div class="container">
 
 <% if @guess.correct%>
-    <p>Correct!</p>
+  <h2 class="blue">Correct!</h2>
 <% else %>
-  <p>Incorrect. <%= @previous_card.answer %> is the correct answer.</p>
-  <%end%>
+  <h2 class="red">Incorrect.</h2><h2 class="rounded-gray"> <%= @previous_card.answer %> is the correct answer.</h2>
+<%end%>
 
-  <p>You got <%= @game.guesses.where(correct: true).length%> out of <%=@game.guesses.length%> correct.</p>
 
-  <a href= "/users/<%=current_user.id%>">View all your stats!</a>
+  <h1 class="rounded-gray">You got <span class="blue"><%= @game.guesses.where(correct: true).length%></span> out of <span class="blue"><%=@game.guesses.length%></span> correct.</h1>
+
+  <h2><a href= "/users/<%=current_user.id%>">View all your stats!</a></h2>
 
 
 </div>
