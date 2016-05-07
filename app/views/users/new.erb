@@ -3,13 +3,8 @@
   <h1> Please Sign Up </h1>
 
 
-  <% if @errors %>
-  <ul>
-    <% @errors.each do |message| %>
-    <li> <%= message %> </li>
-    <% end %>
-  </ul>
-  <% end %>
+  <%= erb :'/_errors', layout: false %>
+
 
   <form action = '/users' method= "POST">
     <input type= "text" name= "user[username]" placeholder= "Username">

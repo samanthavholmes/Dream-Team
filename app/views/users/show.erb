@@ -5,17 +5,27 @@
   <ul>
     <% @played_decks.each do |deck| %>
     <li> <%= deck.deck_name %> :: Cards in Deck: <%= deck.cards.length%></li>
+
       <% @played_games.each do |game| %>
+      <% if game.guesses.length == deck.cards.length %>
         <% if game.deck_id == deck.id %>
-          <p>Date: </p><%= game.created_at %>
+          <p>* Date: <%= game.created_at.strftime("%b %d, %Y") %></p>
             <% @game_correct_hash.each do |game_id, num_correct| %>
                 <% if game_id == game.id %>
-              <p>Number Correct: </p> <%= num_correct %>
+              <p>Percentage Correct:  <%= (num_correct.to_f/deck.cards.length * 100).round %>%</p>
+             <% end %>
+             <% end %>
+             <% @game_incorrect_hash.each do |game_id, num_incorrect| %>
+                <% if game_id == game.id && !@game_correct_hash.has_key?(game.id)%>
+              <p>Percentage Correct:  0% </p>
             <% end %>
              <% end %>
           <% end %>
       <% end %>
+      <% end %>
     <% end %>
   </ul>
+
+
 
 </div>

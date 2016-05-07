@@ -4,4 +4,10 @@ class Card < ActiveRecord::Base
 
   validates :question, :answer, presence: true
 
+
+  def self.check_answer?(card, guess)
+    card.answer.downcase == guess.downcase
+  end
 end
+
+
