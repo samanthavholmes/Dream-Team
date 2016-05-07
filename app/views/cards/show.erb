@@ -10,16 +10,9 @@
   </section>
 
   <% if @guess %>
-    <% if @guess.correct %>
-    <p>Correct!</p>
-    <% else %>
-    <p>Incorrect. <%= @previous_card.answer %> is the correct answer.</p>
-    <% end %>
-
-
+    <p><%= Guess.display_result(@previous_card, @guess) %></p>
   <% end %>
   </section>
-
 
   <form
 
