@@ -1,12 +1,11 @@
 #not sure of the name of the objects
 
 # World Capitals
-Card.create! [{ :question => 'Afghanistan', :answer => 'Kabul'},
+world_capitals = Card.create! [{ :question => 'Afghanistan', :answer => 'Kabul'},
                { :question => 'Argentina', :answer => 'Buenos Aires'},
                { :question => 'Australia', :answer => 'Canberra'},
                { :question => 'Austria', :answer => 'Vienna'},
                { :question => 'Bangladesh', :answer => 'Dhaka'},
-               { :question => 'Belgium', :answer => 'Brussels'},
                { :question => 'Belgium', :answer => 'Brussels'},
                { :question => 'Bulgaria', :answer => 'Sofia'},
                { :question => 'Canada', :answer => 'Ottawa'},
@@ -82,9 +81,30 @@ Card.create! [{ :question => 'Afghanistan', :answer => 'Kabul'},
                { :question => 'Uzbekistan', :answer => 'Tashkent'},
                { :question => 'Vietnam', :answer => 'Hanoi'}]
 
-# Harry Potte Trivia
+# Geography Trivia
+geography = Card.create! [{:question => 'Catalonia is a region of what country?', :answer => 'Spain'},
+                          {:question => 'What country is Machu Picchu in?', :answer => 'Peru'},
+                          {:question => 'What city in India is the Taj Mahal located in?', :answer => 'Agra'},
+                          {:question => 'What is the smallest US State by area?', :answer => 'Rhode Island'},
+                          {:question => 'What is the biggest US State area?', :answer => 'Alaska'},
+                          {:question => 'Area 51 is in which state?', :answer => 'Nevada'},
+                          {:question => 'What language do they speak in Brazil?', :answer => 'Portuguese'},
+                          {:question => 'By area, which is the smallest ocean in the world?', :answer => 'Arctic'},
+                          {:question => 'Which city has the largest population in the world?', :answer => 'Tokyo'},
+                          {:question => 'What is the most widely spoken language in the world?', :answer => 'Chinese'},
+                          {:question => 'What city is traditionally said to be built on seven hills?', :answer => 'Rome'},
+                          {:question => 'Which country has the most volcanoes?', :answer => 'Indonesia'},
+                          {:question => 'What city is the tallest building in the world located in?', :answer => 'Dubai'},
+                          {:question => 'What is the world\'s largest ocean?', :answer => 'Pacific'},
+                          {:question => 'Which country has the longest land border?', :answer => 'China'},
+                          {:question => 'Where would you find St. Peter\'s Basilica?', :answer => 'Vatican City'},
+                          {:question => 'Which country has the largest land mass?', :answer => 'Russia'},
+                          {:question => 'What city connects two continents?', :answer => 'Istanbul'}]
 
-Card.create! [{:question => 'Who is Harry Potter\'s godfather?', :answer => 'Sirius Black'},
+
+# Harry Potter Trivia
+
+harry_potter = Card.create! [{:question => 'Who is Harry Potter\'s godfather?', :answer => 'Sirius Black'},
               {:question => 'Who killed Bellatrix?', :answer => 'Molly Weasley'},
               {:question => 'Who did Harry Potter marry?', :answer => 'Ginny'},
               {:question => 'Who took Hermione to the Yule Ball?', :answer => 'Viktor Krum'},
@@ -113,3 +133,66 @@ Card.create! [{:question => 'Who is Harry Potter\'s godfather?', :answer => 'Sir
               {:question => 'What article of clothing did Harry give Dobby?', :answer => 'Sock'},
               {:question => 'What spell can unlock doors?', :answer => 'Alohomora'},
               {:question => 'Where does Harry buy his school supplies?', :answer => 'Diagon Alley'}]
+
+# Justin Bieber
+justin_bieber = Card.create! [{:question => 'What is Justin\'s middle name?', :answer =>'Drew'},
+              {:question => 'What country is Justin a citizen of?', :answer =>'Canada'},
+              {:question => 'What is Justin\'s birthday? (mm/dd/yy)', :answer =>'03/01/94'},
+              {:question => 'What is Justin\'s zodiac sign?', :answer =>'Pisces'},
+              {:question => 'What is the name of Justin\'s first studio album?', :answer =>'My World 2.0'},
+              {:question => 'What is the name of Justin\'s second studio album?', :answer =>'Under the Mistletoe'},
+              {:question => 'What is the name of Justin\'s third studio album?', :answer =>'Believe'},
+              {:question => 'What is the name of Justin\'s fourth studio album?', :answer =>'Purpose'},
+              {:question => 'What is the name of Justin\'s first EP?', :answer =>'My World'},
+              {:question => 'What is the name of Justin\'s compilation album released in 2013?', :answer =>'Journals'},
+              {:question => 'How many months did it take for "My World" to go platinum?', :answer =>'3'},
+              {:question => 'What was the first single released on "Purpose"?', :answer =>'What Do You Mean'},
+              {:question => 'What is Justin\'s half brother\'s name?', :answer =>'Jaxon'},
+              {:question => 'What is Justin\'s half sister\'s name?', :answer =>'Jazmyn'},
+              {:question => 'What is Justin\'s mom\'s name?', :answer =>'Pattie Mallette'},
+              {:question => 'What is Justin\'s snapchat name?', :answer =>'rickthesizzler'},
+              {:question => 'What is Justin\'s favorite color?', :answer =>'Purple'},
+              {:question => 'In what city was Justin arrested?', :answer =>'Miami'},
+              {:question => 'What underwear brand does Justin model for?', :answer =>'Calvin Klein'},
+              {:question => 'What year was Justin signed to Island Records?', :answer =>'2008'}
+              {:question => 'Where was Justin discovered?', :answer =>'YouTube'}
+              {:question => 'True or False: Justin can speak French', :answer =>'True'}
+              {:question => 'What R&B star signed Justin?', :answer =>'Usher'}
+              {:question => 'What is Justin\'s monkey\'s name?', :answer =>'OG Mally'}
+              {:question => 'In what country did Justin\'s monkey get confiscated in?', :answer =>'Germany'}
+              {:question => 'What talk show did Justin have his first TV appearance on?', :answer =>'Ellen'}]
+
+# Friends Trivia
+
+friends = Card.create! [{:question => 'What is Ross\'s last name?', :answer => 'Geller'},
+                        {:question => 'What is Rachel\'s last name?', :answer => 'Green'},
+                        {:question => 'What is Phoebe\'s last name?', :answer => 'Buffay'},
+                        {:question => 'What is Chandler\'s last name?', :answer => 'Bing'},
+                        {:question => 'What is Joey\'s last name?', :answer => 'Tribbiani'},
+                        {:question => 'What is Monica\'s maiden name?', :answer => 'Geller'},
+                        {:question => 'Who does Monica marry?', :answer => 'Chandler'},
+                        {:question => 'Who does Rachel have a baby with?', :answer => 'Ross'},
+                        {:question => 'What is Ross\'s ex-wife\'s name?', :answer => 'Carol'},
+                        {:question => 'What is Ross\'s son\'s name?', :answer => 'Ben'},
+                        {:question => 'What profession is Ross?', :answer => 'Paleontologist'},
+                        {:question => 'What profession is Monica?', :answer => 'Chef'},
+                        {:question => 'What profession is Joey?', :answer => 'Actor'},
+                        {:question => 'What is the name of the gang\'s favorite coffee shop?', :answer => 'Central Perk'},
+                        {:question => 'How many times has Ross been divorced?', :answer => '3'},
+                        {:question => 'Who\'s name did Ross say at his wedding to Emily?', :answer => 'Rachel'},
+                        {:question => 'What city did Ross marry Emily in?', :answer => 'London'},
+                        {:question => 'What is Rachel\'s daughter\'s name?', :answer => 'Emma'},
+                        {:question => 'Fill in the blank of this song by Phoebe: "_____ Cat"', :answer => 'Smelly'},
+                        {:question => 'Who was the Central Perk emplyoee that had a crush on Rachel?', :answer => 'Gunther'},
+                        {:question => 'What city did Ross and Rachel drunkenly get married in?', :answer => 'Las Vegas'},
+                        {:question => 'What city does the gang live in?', :answer => 'New York City'},
+                        {:question => 'What is Joey\'s well known catch-phrase that he uses to hit on women?', :answer => 'How you doing?'},
+                        {:question => 'What does Joey not share?', :answer => 'Food'},
+                        {:question => 'What type of bird did the guys have in their apartment?', :answer => 'Duck'},
+                        {:question => 'What character did Joey play on "Days of Our Lives"?', :answer => 'Dr. Drake Ramoray'},
+                        {:question => 'True or False: Monica used to be fat?', :answer => 'True'},
+                        {:question => 'Who does Phoebe marry?', :answer => 'Mike'},
+                        {:question => 'What is Pheobe\'s twin sister named?', :answer => 'Ursula'},
+                        {:question => 'Who has a secret closet full of junk?', :answer => 'Monica'},
+                        {:question => 'Who first found out about Monica and Chandler\'s relationship?', :answer => 'Joey'}]
+
