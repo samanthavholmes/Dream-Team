@@ -6,11 +6,7 @@ class Guess < ActiveRecord::Base
     guess.update_attributes(correct: true)
   end
 
-  def self.display_result(card, guess)
-     if guess.correct
-        "Correct!"
-     else
-        "Incorrect. #{card.answer} is the correct answer."
-     end
-   end
+  def self.display_incorrect(card)
+    "Incorrect. #{card.answer} is the correct answer."
+  end
 end
