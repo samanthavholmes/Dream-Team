@@ -16,7 +16,7 @@
 
 <section class="guess-container">
   <% if @guess %>
-    <h2 class="rounded-gray"><%= Guess.display_result(@previous_card, @guess) %></h2>
+   <%= erb :'/_display_result', layout: false %>
   <% end %>
 </section>
 

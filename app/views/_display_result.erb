@@ -1,0 +1,7 @@
+<% if @guess.correct %>
+  <h2 class = "blue">Correct!</h2>
+  <% else %>
+  <h2 class = "red">
+    <%= Guess.display_incorrect(@previous_card) %>
+  </h2>
+  <% end %>
