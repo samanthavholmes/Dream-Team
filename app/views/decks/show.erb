@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="rounded-gray">This is the <span class="highlight-word"><%= @deck.deck_name.capitalize %> </span>deck</h1>
+  <h1 class="rounded-gray">This is the <span class="highlight-word"><%= @deck.deck_name %> </span>deck</h1>
 <h3 class="rounded-gray">Are you ready to get Quizzy?</h3>
   <form class="form" action="/decks/<%=@deck.id%>" method="post">
     <input type="hidden" name="deck_id" value="<%= @deck.id %>" >

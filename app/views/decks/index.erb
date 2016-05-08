@@ -4,7 +4,7 @@
     <% @decks.each do |deck| %>
       <div class="deck-card">
         <div class="deck-card-text">
-          <a href="/decks/<%= deck.id %>"><%= deck.deck_name.capitalize %></a>
+          <a href="/decks/<%= deck.id %>"><%= deck.deck_name %></a>
         </div>
       </div>
     <% end %>

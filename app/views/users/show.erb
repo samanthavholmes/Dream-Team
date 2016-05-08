@@ -19,7 +19,7 @@
     <% end %>
     <% @game_incorrect_hash.each do |game_id, num_incorrect| %>
     <% if game_id == game.id && !@game_correct_hash.has_key?(game.id)%>
-    <span class="rounded-gray">&nbsp;&nbsp;&nbsp;<span class="highlight-word">Score:</span> 0%</span>
+    <span class="rounded-gray">&nbsp;&nbsp;&nbsp;<span class="highlight-word">Score:</span> 0%</span><br><br>
     <% end %>
     <% end %>
 
