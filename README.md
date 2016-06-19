@@ -74,5 +74,3 @@ If we haven't been writing tests as we go—or even better using TDD—then now 
 - [capybara](https://github.com/jnicklas/capybara)
 
 
-## Conclusion
-The application we built in this challenge represents a step up in complexity compared to our previous web application challenges—both technically and organizationally.  This challenge is as much about project management and team dynamics as it is about the code.  What skills/lessons did you learn from working with a team?  How will you work better next time?
