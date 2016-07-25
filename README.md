@@ -12,4 +12,5 @@ Ruby and Sinatra web application. Built using RESTful conventions and custom CSS
 
 ## ToDo
 
+- [ ] Incorporate jQuery/AJAX
 - [ ] Host on AWS
